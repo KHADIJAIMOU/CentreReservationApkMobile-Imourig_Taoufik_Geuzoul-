@@ -11,10 +11,9 @@
     <string name="text4">Nombre de siges :30 .Diponibilit:false .Nombre de matriel :2.Nom de matriel :datashow.Type de matriel:informatique.</string>
 
     <string name="text5">Nombre de siges :0 .Diponibilit:true .Nombre de matriel :0.Nom de matriel :0.Type de matriel:null.</string>
-    <string name="text1_center">Centre d'études et de formation. Tiznit -CEFT . Nombre des salles : 10</string>
-    <string name="text2_center">Un centre culturel institution et un lieu qui propose notamment une programmation de spectacles, des expositions
-Nombre des salles : 10</string>
-    <string name="text3_center">Appui du sport de proximité au centre urbain; Amélioration des conditions d\'entrainement . Nombre des salles : 10</string>
-    <string name="text4_center">Mettre en réseau les acteurs opérant dans le domaine artistique coopération locale. Nombre des salles : 10</string>
+    <string name="text1_center">Centre d'études et de formation. Tiznit -CEFT . \nNombre des salles : 10</string>
+    <string name="text2_center">Un centre culturel institution  qui propose notamment une programmation \nNombre des salles : 10</string>
+    <string name="text3_center">Appui du sport de proximité au centre urbain; Amélioration des conditions d\'entrainement . \nNombre des salles : 10</string>
+    <string name="text4_center">Mettre en réseau les acteurs opérant dans le domaine artistique coopération locale.\n Nombre des salles : 10</string>
 
 </resources>

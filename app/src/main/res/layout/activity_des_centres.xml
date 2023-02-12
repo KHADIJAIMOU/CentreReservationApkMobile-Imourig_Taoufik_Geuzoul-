@@ -122,6 +122,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text1_center" />
+                    <ImageView
+                        android:id="@+id/localisation_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="79dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/localisation_icon" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -160,7 +168,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="12dp"
                         android:text="@string/text2_center" />
+
+                    <ImageView
+                        android:id="@+id/localisation_icon1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="79dp"
+
+                        android:src="@drawable/localisation_icon" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -192,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:text="Centre de Jeunesse et sport"
                         android:layout_marginLeft="10dp"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
                         android:textColor="#FF640D"
 
                         android:textStyle="bold" />
@@ -200,7 +218,16 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="12dp"
                         android:text="@string/text3_center" />
+                    <ImageView
+                        android:id="@+id/localisation_icon2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="79dp"
+
+                        android:src="@drawable/localisation_icon" />
                 </LinearLayout>
             </LinearLayout>
             <!-- Repeat for the other four items -->
@@ -240,7 +267,16 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="12dp"
                         android:text="@string/text4_center" />
+                    <ImageView
+                        android:id="@+id/localisation_icon3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="79dp"
+
+                        android:src="@drawable/localisation_icon" />
                 </LinearLayout>
             </LinearLayout>
 
