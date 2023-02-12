@@ -36,6 +36,37 @@
             android:src="@drawable/logout"
             android:layout_alignParentEnd="true"/>
 
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@id/welcome_layout">
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="39dp"
+            android:padding="2dp"
+            android:hint="-chercher une salle"
+
+            android:background="@drawable/editround"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/search1" />
+
     </RelativeLayout>
 
 
@@ -43,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/welcome_layout"
+        android:layout_marginTop="60dp"
         android:background="@drawable/rectangle">
 
         <LinearLayout
@@ -51,41 +83,38 @@
             android:layout_marginTop="50dp"
             android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/item_1"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/rectangle_list"
-
-
-
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/t_l_chargement_3"/>
-
             <LinearLayout
+                android:id="@+id/item_1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="16dp">
+                android:layout_height="130dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rectangle_list"
+                android:padding="16dp">
 
-                <TextView
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/t_l_chargement_3" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Salle d’acceuil"
-                    android:textStyle="bold"/>
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text1"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Salle d’acceuil"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text1" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
 
             <!-- Repeat for the other four items -->
@@ -128,10 +157,10 @@
                 android:id="@+id/item_3"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/rectangle_list"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
+                android:background="@drawable/rectangle_list"
 
                 android:padding="16dp">
 
@@ -164,10 +193,10 @@
                 android:id="@+id/item_4"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/rectangle_list"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
+                android:background="@drawable/rectangle_list"
 
                 android:padding="16dp">
 
@@ -200,10 +229,10 @@
                 android:id="@+id/item_5"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/rectangle_list"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
+                android:background="@drawable/rectangle_list"
 
                 android:padding="16dp">
 
@@ -232,9 +261,6 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-
-
 
 
 </RelativeLayout>

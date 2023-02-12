@@ -37,12 +37,42 @@
             android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@id/welcome_layout">
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="39dp"
+            android:padding="2dp"
+            android:hint="-chercher un centre"
 
+            android:background="@drawable/editround"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/search1" />
+
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/welcome_layout"
+        android:layout_marginTop="60dp"
         android:background="@drawable/rectangle">
 
         <LinearLayout
