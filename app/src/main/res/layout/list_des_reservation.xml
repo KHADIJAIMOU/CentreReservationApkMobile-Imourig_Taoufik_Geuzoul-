@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/item_reser1"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rectangle_list"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_reser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/salle5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reserv_sal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:text="Salle d’acceuil"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/details_reserv"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:layout_marginTop="1dp"
+                android:text="Date Début : 04-01-2023. \nDate Fin : 09-01-2023.\nTemps Début : 10:45.\nTemps Fin : 12:45.\nAvancement : Acceptée." />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

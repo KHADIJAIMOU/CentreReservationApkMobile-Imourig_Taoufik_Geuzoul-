@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Repeat for the other four items -->
+
+    <LinearLayout
+        android:id="@+id/center1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_list"
+
+
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_center"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ceftiznit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+
+                android:text="CEFT Tiznit"
+                android:textColor="#FF640D"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/desc_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text1_center" />
+            <ImageView
+                android:id="@+id/localisation_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="79dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/localisation_icon" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
