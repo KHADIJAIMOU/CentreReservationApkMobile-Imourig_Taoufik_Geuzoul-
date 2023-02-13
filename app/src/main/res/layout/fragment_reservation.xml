@@ -55,6 +55,7 @@
         android:ems="10"
         android:hint="Saisir une date"
         android:inputType="date"
+        android:textColor="@color/black"
         android:minHeight="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
@@ -87,6 +88,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColorHint="#6F6E6E"
+        android:textColor="@color/black"
         android:background="@drawable/edit_text_border"
         />
     <TextView
@@ -112,6 +114,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColorHint="#6F6E6E"
+        android:textColor="@color/black"
         android:background="@drawable/edit_text_tempsd"
         />
     <EditText
@@ -126,6 +129,7 @@
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:textColorHint="#6F6E6E"
+        android:textColor="@color/black"
         android:background="@drawable/edi_text_tempsf"
         />
     <TextView
@@ -151,6 +155,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColorHint="#6F6E6E"
+        android:textColor="@color/black"
         android:background="@drawable/edit_text_border"
         />
     <Button
