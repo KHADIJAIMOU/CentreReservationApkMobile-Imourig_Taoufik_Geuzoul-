@@ -1,16 +1,14 @@
-package com.example.centrereservation.controller;
+package com.example.centrereservation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.centrereservation.R;
-
-public class salleActivity extends AppCompatActivity {
+public class MotDePassOublie2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_salle);
+        setContentView(R.layout.activity_mot_de_pass_oublie2);
     }
 }

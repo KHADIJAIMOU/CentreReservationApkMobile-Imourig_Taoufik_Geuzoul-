@@ -2,14 +2,14 @@
 
     <string name="recherche_une_salle_string">Recherche une salle </string>
 
-    <string name="text1">Nombre de siges :53 .Diponibilit:true .Nombre de matriel :2.Nom de matriel :datashow.Type de matriel:informatique.</string>
+    <string name="text1">Nombre de siges :53 \nDiponibilit:true \nNombre de matriel :2 \nNom de matriel :datashow \nType de matriel:informatique.</string>
 
-    <string name="text2">Nombre de siges :15 .Diponibilit:true .Nombre de matriel :0.Nom de matriel :0.Type de matriel:null.</string>
-    <string name="text3">Nombre de siges :15 .Diponibilit:false .Nombre de matriel :0.Nom de matriel :0.Type de matriel:null.</string>
+    <string name="text2">Nombre de siges :15 \nDiponibilit:true \nNombre de matriel :0\nNom de matriel :0\nType de matriel:null.</string>
+    <string name="text3">Nombre de siges :15 .Diponibilit:false \nNombre de matriel :0\nNom de matriel :0\nType de matriel:null.</string>
 
-    <string name="text4">Nombre de siges :30 .Diponibilit:false .Nombre de matriel :2.Nom de matriel :datashow.Type de matriel:informatique.</string>
+    <string name="text4">Nombre de siges :30 .Diponibilit:false \nNombre de matriel :2\nNom de matriel :datashow\nType de matriel:informatique.</string>
 
-    <string name="text5">Nombre de siges :0 .Diponibilit:true .Nombre de matriel :0.Nom de matriel :0.Type de matriel:null.</string>
+    <string name="text5">Nombre de siges :0 .Diponibilit:true \nNombre de matriel :0\nNom de matriel :0\nType de matriel:null.</string>
     <string name="text1_center">Centre d\'études et de formation. Tiznit -CEFT . \nNombre des salles : 10</string>
     <string name="text2_center">Un centre culturel institution  qui propose notamment une programmation \nNombre des salles : 10</string>
     <string name="text3_center">Appui du sport de proximité au centre urbain; Amélioration des conditions d\'entrainement . \nNombre des salles : 10</string>

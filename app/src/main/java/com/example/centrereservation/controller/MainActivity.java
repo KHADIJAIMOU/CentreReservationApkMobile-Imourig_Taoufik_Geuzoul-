@@ -26,6 +26,6 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_salle);
+        setContentView(R.layout.activity_mot_de_pass_oublie2);
     }
 }
