@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/navColor"
     android:orientation="vertical"
-
-
-    tools:context=".controller.HomeFragment">
+    tools:context=".ConnectionActivity">
 
     <RelativeLayout
         android:id="@+id/search_layout"
@@ -23,7 +21,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginRight="39dp"
             android:padding="2dp"
-            android:hint="-chercher un centre"
+            android:hint="-chercher une salle"
 
             android:background="@drawable/editround"
             android:ems="10"
@@ -41,6 +39,7 @@
 
     </RelativeLayout>
 
+
     <RelativeLayout
         android:id="@+id/center_list"
         android:layout_width="match_parent"
@@ -48,19 +47,15 @@
         android:padding="16dp"
         android:background="@drawable/rectangle"
         android:layout_below="@id/search_layout">
+
         <ListView
-            android:id="@+id/listview_center"
+            android:id="@+id/listview_salle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            tools:listitem="@layout/list_des_centeres">
-
+            tools:listitem="@layout/list_des_salles">
 
         </ListView>
     </RelativeLayout>
-
-
-
-
 
 
 </RelativeLayout>
