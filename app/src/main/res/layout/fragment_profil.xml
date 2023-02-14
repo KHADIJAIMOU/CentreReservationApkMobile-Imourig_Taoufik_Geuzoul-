@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.ProfilFragment">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/profile"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nom Association"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="80dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="upload image"
+                    android:backgroundTint="@color/bgBtnEditImg"
+                    android:textColor="@color/black"
+
+                    />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="changer image"
+                    android:backgroundTint="@color/bgBtnEditImg"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            >
+
+            <TextView
+                android:id="@+id/textViewTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Téléphone"
+                android:textSize="18sp"
+                android:textColor="@color/txtView"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editTextTel"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:background="@color/bgPlainTxt"
+                android:ems="10"
+                android:inputType="phone"
+                android:paddingLeft="15dp"
+                android:text="06 12 34 56 78"
+                android:textColor="@color/editTxtColor"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textViewAdresse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adresse"
+                android:textSize="18sp"
+                android:textColor="@color/txtView"
+                android:textStyle="bold"
+                android:paddingTop="15dp"/>
+
+            <EditText
+                android:id="@+id/editTextAdresse"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:background="@color/bgPlainTxt"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:text="Tiznit"
+                android:textColor="@color/editTxtColor"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="18sp"
+                android:textColor="@color/txtView"
+                android:textStyle="bold"
+                android:paddingTop="15dp"
+                />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:background="@color/bgPlainTxt"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="15dp"
+                android:text="association@gmail.com"
+                android:textColor="@color/editTxtColor"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <TextView
+                android:id="@+id/textViewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mot de Passe"
+                android:textSize="18sp"
+                android:textColor="@color/txtView"
+                android:textStyle="bold"
+                android:paddingTop="15dp"
+                />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:background="@color/bgPlainTxt"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:text="azertyuiop^$"
+                android:textColor="@color/editTxtColor"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            <TextView
+                android:id="@+id/textViewRepet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmer Mot de Passe"
+                android:textSize="18sp"
+                android:textColor="@color/txtView"
+                android:textStyle="bold"
+                android:paddingTop="15dp"/>
+
+            <EditText
+                android:id="@+id/editTextRepet"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:background="@color/bgPlainTxt"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:text="azertyuiop^$"
+                android:textColor="@color/editTxtColor"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editer"
+                android:backgroundTint="@color/btnEditer"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+</LinearLayout>

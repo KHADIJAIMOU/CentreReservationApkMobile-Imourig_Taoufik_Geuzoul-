@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="navColor">#D9D9D9</color>
+    <color name="menuColor">#342D90</color>
+    <color name="reservBgColor">#3391B8E2</color>
+    <color name="bgBtnEditImg">#D9D9D9</color>
+    <color name="bgPlainTxt">#F6EFE8</color>
+    <color name="txtView">#747478</color>
+    <color name="editTxtColor">#483332</color>
+    <color name="btnEditer">#113FCA</color>
+
 </resources>
