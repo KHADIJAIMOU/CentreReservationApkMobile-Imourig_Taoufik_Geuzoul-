@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
     EditText PersonEmail,Password;
     Button SeConnect,Inscription;
+    FirebaseDatabase database;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         PersonEmail.setError(null);
 
 
-                        Intent intent=new Intent(MainActivity.this, AppActivity.class);
+                        Intent intent=new Intent(MainActivity.this, HomeFragment.class);
                         startActivity(intent);
                     }
                     else{

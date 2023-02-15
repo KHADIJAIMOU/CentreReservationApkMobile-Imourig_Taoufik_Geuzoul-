@@ -1,4 +1,4 @@
-package com.example.centrereservation;
+package com.example.centrereservation.controller;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,12 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.centrereservation.R;
+import com.example.centrereservation.center;
+
 import java.util.ArrayList;
 
 public class List_Adapter_centre extends ArrayAdapter<center> {
     public List_Adapter_centre(Context context,ArrayList<center> center_ArrayList)
     {
-        super(context,R.layout.list_des_centeres,center_ArrayList);
+        super(context, R.layout.list_des_centeres,center_ArrayList);
     }
 
     @NonNull

@@ -15,8 +15,7 @@
     <string name="text3_center">Appui du sport de proximité au centre urbain; Amélioration des conditions d\'entrainement . \nNombre des salles : 10</string>
     <string name="text4_center">Mettre en réseau les acteurs opérant dans le domaine artistique coopération locale.\n Nombre des salles : 10</string>
 
-    <string name="app_name">CentreReservationApkMobile</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="app_name">Reservation des centres </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 >>>>>>>>> Temporary merge branch 2
