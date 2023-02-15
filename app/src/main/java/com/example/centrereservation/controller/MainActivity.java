@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         PersonEmail.setError(null);
 
 
-                        Intent intent=new Intent(MainActivity.this, HomeFragment.class);
+                        Intent intent=new Intent(MainActivity.this, AppActivity.class);
                         startActivity(intent);
                     }
                     else{

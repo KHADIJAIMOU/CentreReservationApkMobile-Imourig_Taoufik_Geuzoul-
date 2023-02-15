@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.centrereservation.List_Adapter_centre;
+import com.example.centrereservation.controller.List_Adapter_centre;
 import com.example.centrereservation.R;
 import com.example.centrereservation.center;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

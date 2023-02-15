@@ -7,7 +7,7 @@
     android:background="#FEFEFE"
     android:orientation="vertical"
     android:padding="9dp"
-    tools:context=".InscriptionActivity">
+   >
 
 
     <ScrollView

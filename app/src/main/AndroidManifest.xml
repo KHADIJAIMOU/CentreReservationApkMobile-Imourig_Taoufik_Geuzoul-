@@ -33,7 +33,15 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity> <activity
+        </activity>
+        <activity
+            android:name=".controller.HomeFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
         android:name=".controller.InscriptionActivity"
         android:exported="false">
         <meta-data
