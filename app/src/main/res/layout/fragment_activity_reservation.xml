@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navColor"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+      >
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="39dp"
+            android:padding="2dp"
+            android:hint="-search"
+
+            android:background="@drawable/editround"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/search1" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/center_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@drawable/rectangle"
+        android:layout_below="@id/search_layout">
+
+        <ListView
+            android:id="@+id/listview_reservation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/list_des_reservation"
+            ></ListView>
+
+
+    </RelativeLayout>
+</LinearLayout>

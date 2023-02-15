@@ -1,5 +1,11 @@
 <resources>
+
+    <string name="recherche_une_salle_string">Recherche une salle </string>
+
     <string name="app_name">CentreReservationApkMobile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="availability">availability : </string>
+    <string name="nbSeats">nbSeats : </string>
+
 </resources>

@@ -8,34 +8,34 @@
     android:id="@+id/content_fragment"
     tools:context=".controller.ReservationFragment">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:orientation="horizontal"
-            android:background="@color/reservBgColor">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/reservBgColor">
 
-            <ImageButton
-                android:id="@+id/buttonBack"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:contentDescription="back"
-                android:backgroundTint="@android:color/transparent"
-                android:src="@drawable/ic_back" />
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:contentDescription="back"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_back" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reservation"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginStart="15dp"
-                android:layout_gravity="center"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservation"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center"
 
-                />
-        </LinearLayout>
+            />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView7"

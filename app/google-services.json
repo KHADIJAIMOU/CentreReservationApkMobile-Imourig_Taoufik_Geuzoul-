@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "67700564738",
+    "project_id": "centrereservationapkmobile",
+    "storage_bucket": "centrereservationapkmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67700564738:android:6249800e2b6cc9dceed81b",
+        "android_client_info": {
+          "package_name": "com.example.centrereservation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67700564738-ds1bjk6r76m8afo791la87p2uq5ukkvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhww9R56SksIaMIpwWVA5RHx7bJ9lnmIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67700564738-ds1bjk6r76m8afo791la87p2uq5ukkvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

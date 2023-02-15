@@ -1,16 +1,466 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#FEFEFE"
+    android:orientation="vertical"
+    android:padding="9dp"
     tools:context=".controller.MainActivity">
 
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="352dp"
+                    android:layout_height="226dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:contentDescription="Logo"
+                    app:srcCompat="@drawable/image1"
+                    tools:ignore="NestedWeights" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="98dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Inscription"
+                    android:textColor="#231A85"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewNom"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Nom "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextNom"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="20sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewPrenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Prenom "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextPrenom"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="20sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewMatricule"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Matricule"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextMatricule"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="20sp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewAdresse"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Adresse"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextAdresse"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTéléphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Téléphone "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextTéléphone"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewNomassociation"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Nom association"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextNomassociation"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Email"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewMotdepasse"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Mot de passe"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextMotdepasse"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewCodeVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Code vérification"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <EditText
+                        android:id="@+id/editTextCodeVerification"
+                        android:layout_width="271dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="33dp"
+                        android:background="@drawable/editround"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewImportFichierJuridique"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="Fichier Juridique"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editround">
+
+                    <Button
+                        android:id="@+id/ImporterFichierJuridique"
+                        android:layout_width="245dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/buttonroundimport"
+                        android:text="Importer un fichier"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonCreer"
+                    android:layout_width="194dp"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/buttonround"
+                    android:text="Créer"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/seConnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginBottom="100dp"
+                    android:background="@drawable/buttonround"
+                    android:text="Se connecter"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
