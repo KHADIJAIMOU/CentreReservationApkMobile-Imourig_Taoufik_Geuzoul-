@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- Repeat for the other four items -->
-    <LinearLayout
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+
+    app:cardBackgroundColor="#fff"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
         android:id="@+id/item_2"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/rectangle_list"
         android:padding="16dp">
 
@@ -17,29 +18,49 @@
             android:id="@+id/image_salle"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/salle3" />
-
-        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/salle3"
+            android:background="@drawable/roundimage"
+            />
+        <TextView
+            android:id="@+id/typeSalle_"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:orientation="vertical">
+            android:layout_marginTop="-5dp"
+            android:text="Salle d’acceuil"
+            android:layout_marginLeft="8dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/image_salle"/>
 
-            <TextView
-                android:id="@+id/nom_salle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-5dp"
-                android:text="Salle d’acceuil"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/nbSeats_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeSalle_"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="-2dp"
 
-            <TextView
-                android:id="@+id/desc_salle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text1" />
-        </LinearLayout>
-    </LinearLayout>
+            android:layout_toRightOf="@id/image_salle"
+            android:text="nbSeats :15"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/availability_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nbSeats_"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toRightOf="@id/image_salle"
+            android:text="availability_ :true"
+            android:textColor="#000" />
 
 
-</LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/navColor"
     android:orientation="vertical"
-
-
+    android:id="@+id/home"
     tools:context=".controller.HomeFragment">
 
     <RelativeLayout
@@ -23,7 +22,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginRight="39dp"
             android:padding="2dp"
-            android:hint="-chercher un centre"
+            android:hint="-recherche un centre"
 
             android:background="@drawable/editround"
             android:ems="10"
@@ -40,27 +39,15 @@
             android:src="@drawable/search1" />
 
     </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/center_list"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/search_layout"
         android:background="@drawable/rectangle"
-        android:layout_below="@id/search_layout">
-        <ListView
-            android:id="@+id/listview_center"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/list_des_centeres">
-
-
-        </ListView>
-    </RelativeLayout>
-
-
-
-
+        android:padding="16dp"
+        />
 
 
 </RelativeLayout>

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/navColor"
     android:orientation="vertical"
-    tools:context=".ConnectionActivity">
+
+    tools:context=".controller.salleActivity1">
 
     <RelativeLayout
         android:id="@+id/search_layout"
@@ -40,22 +41,15 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:id="@+id/center_list"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_salle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/search_layout"
         android:background="@drawable/rectangle"
-        android:layout_below="@id/search_layout">
-
-        <ListView
-            android:id="@+id/listview_salle"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/list_des_salles">
-
-        </ListView>
-    </RelativeLayout>
+        android:padding="16dp"
+        />
 
 
 </RelativeLayout>

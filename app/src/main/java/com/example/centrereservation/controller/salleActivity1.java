@@ -3,12 +3,23 @@ package com.example.centrereservation.controller;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.centrereservation.List_Adapter_centre;
 import com.example.centrereservation.R;
+import com.example.centrereservation.center;
+import com.example.centrereservation.list_adapter_salle;
+import com.example.centrereservation.salle;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,8 +28,10 @@ import com.example.centrereservation.R;
  */
 public class salleActivity1 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    RecyclerView recyclerView;
+    DatabaseReference database;
+    list_adapter_salle adapter_salle;
+    ArrayList<salle> list;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -61,6 +74,23 @@ public class salleActivity1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_salle_activity1, container, false);
+        View v= inflater.inflate(R.layout.fragment_salle_activity1, container, false);
+        recyclerView = v.findViewById(R.id.recycleview_salle);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext())) ;
+        FirebaseRecyclerOptions<salle> options = new FirebaseRecyclerOptions.Builder<salle>().setQuery(FirebaseDatabase.getInstance().getReference().child("salle"), salle.class).build();
+
+        adapter_salle=new list_adapter_salle(options);
+        recyclerView.setAdapter(adapter_salle);
+        return  v;
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter_salle.startListening();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter_salle.stopListening();
     }
 }
