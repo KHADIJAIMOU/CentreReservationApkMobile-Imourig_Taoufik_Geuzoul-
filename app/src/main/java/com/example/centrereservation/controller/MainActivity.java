@@ -13,6 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,5 +28,7 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mot_de_pass_oublie2);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportFragmentManager().beginTransaction().replace(R.id.home,new HomeFragment()).commit();
     }
 }
