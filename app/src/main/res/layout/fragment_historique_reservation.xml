@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/navColor"
     android:orientation="vertical"
-    tools:context=".ConnectionActivity"
+    tools:context=".controller.Historique_reservation"
     >
 
     <RelativeLayout
