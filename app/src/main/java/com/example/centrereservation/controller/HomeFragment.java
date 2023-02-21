@@ -39,7 +39,6 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext())) ;
         FirebaseRecyclerOptions<center> options = new FirebaseRecyclerOptions.Builder<center>().setQuery(FirebaseDatabase.getInstance().getReference().child("Centre"), center.class).build();
 
-
         adapter_centere=new List_Adapter_centre(options);
         recyclerView.setAdapter(adapter_centere);
         // Add an OnItemClickListener to the RecyclerView items

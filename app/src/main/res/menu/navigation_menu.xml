@@ -3,7 +3,8 @@
     <item
         android:id="@+id/menuAcceuil"
         android:icon="@drawable/ic_home"
-        android:title="Acceuil"/>
+        android:title="Acceuil"
+        />
     <item
         android:id="@+id/menuReservation"
         android:icon="@drawable/ic_calendar"
@@ -12,5 +13,6 @@
     <item
         android:id="@+id/menuProfil"
         android:icon="@drawable/ic_profil"
-        android:title="Profil"/>
+        android:title="Profil"
+        />
 </menu>
