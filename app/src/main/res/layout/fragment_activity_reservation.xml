@@ -46,7 +46,7 @@
         android:background="@drawable/rectangle"
         android:layout_below="@id/search_layout">
 
-        <ListView
+      <ListView
             android:id="@+id/listview_reservation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

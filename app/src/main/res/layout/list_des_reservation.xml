@@ -5,12 +5,12 @@
     <LinearLayout
         android:id="@+id/item_reser1"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="200dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
         android:background="@drawable/rectangle_list"
-        android:padding="16dp">
+        android:padding="7dp">
 
         <ImageView
             android:id="@+id/img_reser"
@@ -21,23 +21,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="1dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/reserv_sal"
+                android:id="@+id/NomCentre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:text="Salle d’acceuil"
-                android:textStyle="bold" />
-
+                android:layout_height="17dp"
+                android:layout_marginTop="1dp"
+                android:text="" />
             <TextView
-                android:id="@+id/details_reserv"
+                android:id="@+id/NomSalle"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_marginTop="1dp"
+                android:text="" />
+            <TextView
+                android:id="@+id/Nom_rese"
                 android:layout_width="match_parent"
                 android:layout_height="98dp"
                 android:layout_marginTop="1dp"
-                android:text="Date Début : 04-01-2023. \nDate Fin : 09-01-2023.\nTemps Début : 10:45.\nTemps Fin : 12:45.\nAvancement : Acceptée." />
+                android:text="" />
+            <TextView
+                android:id="@+id/Progress"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_marginTop="1dp"
+                android:text="" />
         </LinearLayout>
     </LinearLayout>
 
