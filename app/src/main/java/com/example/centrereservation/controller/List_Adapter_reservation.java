@@ -1,6 +1,7 @@
 package com.example.centrereservation.controller;
 
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import com.bumptech.glide.Glide;
 import com.example.centrereservation.R;
 import com.example.centrereservation.model.Reservation;
@@ -39,7 +42,6 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
     @Override
     protected void onBindViewHolder(@NonNull final List_Adapter_reservation.MyViewHolder holder, int position, @NonNull Reservation model) {
         String progress = model.getProgress();
-
         if (progress.equals("en attente")) {
             holder.Avancement.setTextColor(Color.parseColor("#FFA500"));
         } else if (progress.equals("Acceptée")) {
@@ -98,6 +100,7 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
 
             };
         });
+
     }
 
 

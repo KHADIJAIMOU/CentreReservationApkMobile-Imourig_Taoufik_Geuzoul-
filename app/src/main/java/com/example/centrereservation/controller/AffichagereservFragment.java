@@ -116,6 +116,10 @@ public class AffichagereservFragment extends Fragment {
                                 // deletion successful
                                 Toast.makeText(getActivity(), "Reservation deleted successfully", Toast.LENGTH_SHORT).show();
                                 ReservationFragment resFrag = new ReservationFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putString("centreId", centreId);
+                                bundle.putString("salleId", salleId);
+                                resFrag.setArguments(bundle);
                                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                                 fragmentTransaction.replace(R.id.navHostFragment, resFrag);
                                 fragmentTransaction.addToBackStack(null);

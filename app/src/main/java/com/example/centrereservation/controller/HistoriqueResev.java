@@ -60,7 +60,6 @@ public class HistoriqueResev extends Fragment {
 
         adapter_reserv = new List_Adapter_reservation(options);
         recyclerView.setAdapter(adapter_reserv);
-
         return view;
     }
 
