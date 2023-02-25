@@ -22,7 +22,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginRight="39dp"
             android:padding="2dp"
-            android:hint="-recherche un centre"
+            android:hint="-recherche une reservation "
 
             android:background="@drawable/editround"
             android:ems="10"

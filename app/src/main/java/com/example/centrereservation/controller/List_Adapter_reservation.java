@@ -41,15 +41,15 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
         String progress = model.getProgress();
 
         if (progress.equals("en attente")) {
-            holder.Progress.setTextColor(Color.parseColor("#FFA500"));
+            holder.Avancement.setTextColor(Color.parseColor("#FFA500"));
         } else if (progress.equals("Acceptée")) {
-            holder.Progress.setTextColor(Color.GREEN);
+            holder.Avancement.setTextColor(Color.GREEN);
         } else if (progress.equals("Refusée")) {
-            holder.Progress.setTextColor(Color.RED);
+            holder.Avancement.setTextColor(Color.RED);
         }
 
-        holder.Nom_rese.setText( "\nDate Début : " + model.getDateStart() + "\nDate Fin : " + model.getDateEnd() + "\nTemps Début : " + model.getTimeStart() + "\nTemps Fin : " + model.getTimeEnd() + "\n\n\n          Avancement :  \n" );
-        holder.Progress.setText("          "+progress);
+        holder.Nom_rese.setText( "\nDate Début : " + model.getDateStart() + "\nDate Fin : " + model.getDateEnd() + "\nTemps Début : " + model.getTimeStart() + "\nTemps Fin : " + model.getTimeEnd() + "\nAvancement :  \n" );
+        holder.Avancement.setText("        \n            "+progress);
 
         // Fetch the center's image URL from Firebase Storage using the center's id
         DatabaseReference centerRef = FirebaseDatabase.getInstance().getReference("Centre").child(model.getIdCentre());
@@ -111,12 +111,12 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView Nom_rese, Progress,NomCentre,NomSalle;
+        TextView Nom_rese, Progress,NomCentre,NomSalle,Avancement;
         ImageView CenterImage;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            Progress = itemView.findViewById(R.id.Progress);
+            Avancement= itemView.findViewById(R.id.Avancement);
             Nom_rese = itemView.findViewById(R.id.Nom_rese);
             CenterImage = itemView.findViewById(R.id.img_reser);
             NomCentre= itemView.findViewById(R.id.NomCentre);
