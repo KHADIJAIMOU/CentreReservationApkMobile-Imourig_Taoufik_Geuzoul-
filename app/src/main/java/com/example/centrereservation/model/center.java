@@ -3,15 +3,20 @@ package com.example.centrereservation;
 public class center {
 
 
+    private  String name ,image, features,idCentre;
     private  String name ,image, features;
     private double latitude;
     private double longitude;
 
 
-    public center(String name, String image, String features) {
+    public center() {
+    }
+
+    public center(String name, String image, String features, String idCentre) {
         this.name = name;
         this.image = image;
         this.features = features;
+        this.idCentre = idCentre;
     }
     public center(String name, String image, String features,double latitude, double longitude) {
         this.name = name;
@@ -39,27 +44,32 @@ public class center {
         return name;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public String getfeatures() {
-        return features;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public void setImage(String image) {
         this.image = image;
     }
 
-    public void setfeatures(String coordonate) {
-        this.features = coordonate;
+    public String getFeatures() {
+        return features;
     }
 
-    public center() {
+    public void setFeatures(String features) {
+        this.features = features;
+    }
+
+    public String getIdCentre() {
+        return idCentre;
+    }
+
+    public void setIdCentre(String idCentre) {
+        this.idCentre = idCentre;
     }
 
     @Override
@@ -67,7 +77,8 @@ public class center {
         return "center{" +
                 "name='" + name + '\'' +
                 ", image='" + image + '\'' +
-                ", coordonate='" + features + '\'' +
+                ", features='" + features + '\'' +
+                ", idCentre='" + idCentre + '\'' +
                 '}';
     }
 }

@@ -14,7 +14,7 @@
         android:id="@+id/menuReservation"
         android:name="com.example.centrereservation.controller.HistoriqueResev"
         android:label="Reservation"
-        tools:layout="@layout/fragment_reservation" />
+        tools:layout="@layout/fragment_historique_reservation"/>
     <fragment
         android:id="@+id/menuProfil"
         android:name="com.example.centrereservation.controller.ProfilFragment"

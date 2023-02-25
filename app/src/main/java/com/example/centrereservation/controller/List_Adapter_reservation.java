@@ -48,8 +48,8 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
             holder.Avancement.setTextColor(Color.RED);
         }
 
-        holder.Nom_rese.setText( "\nDate Début : " + model.getDateStart() + "\nDate Fin : " + model.getDateEnd() + "\nTemps Début : " + model.getTimeStart() + "\nTemps Fin : " + model.getTimeEnd() + "\nAvancement :  \n" );
-        holder.Avancement.setText("        \n            "+progress);
+        holder.Nom_rese.setText( "\nDate Début : " + model.getDateStart() + "\nDate Fin : " + model.getDateEnd() + "\nTemps Début : " + model.getTimeStart() + "\nTemps Fin : " + model.getTimeEnd() + "\nAvancement :  \n");
+        holder.Avancement.setText("        \n\n            "+progress);
 
         // Fetch the center's image URL from Firebase Storage using the center's id
         DatabaseReference centerRef = FirebaseDatabase.getInstance().getReference("Centre").child(model.getIdCentre());
@@ -59,7 +59,7 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
                 if (snapshot.exists()) {
                     String imageUrl = snapshot.child("image").getValue(String.class);
                     String nameCentrre = snapshot.child("name").getValue(String.class);
-                    holder.NomCentre.setText("Nom centre : " + nameCentrre);
+                    holder.NomCentre.setText("Centre : " + nameCentrre);
 
                     // Load the center's image into the ImageView using Glide library
                     Glide.with(holder.itemView.getContext())
@@ -85,7 +85,7 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     String namesalle = snapshot.child("typeSalle").getValue(String.class);
-                    holder.NomSalle.setText("Nom salle : " + namesalle);
+                    holder.NomSalle.setText("Salle : " + namesalle);
                 } else {
                     // Hide the NomSalle TextView if the salle is not found in the database
                     holder.NomSalle.setVisibility(View.GONE);

@@ -158,17 +158,19 @@
     <EditText
         android:id="@+id/editTextObj"
         android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Saisir votre objectif"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
-        android:gravity="center"
         android:textColorHint="#6F6E6E"
         android:textColor="@color/black"
         android:background="@drawable/edit_text_border"
+        android:textAlignment="viewStart"
+        tools:ignore="RtlCompat"
+        android:padding="8dp"
         />
     <Button
         android:id="@+id/btnreserver"
