@@ -1,6 +1,7 @@
 package com.example.centrereservation.controller;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -8,22 +9,37 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.centrereservation.R;
 import com.example.centrereservation.model.Association;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class InscriptionActivity extends AppCompatActivity {
+    private static final int FILE_PICKER_REQUEST_CODE = 1;
+    EditText editTextnom;
+    EditText editTextPrenom;
+    EditText editTextMatricule;
+    EditText editTextAdresse;
+    EditText editTextTelephone;
+    EditText editTextNomassociation;
+    EditText editTextEmail;
+    EditText editTextMotdepasse;
+    EditText editTextCodeVerification;
+    Button ImporterFichierJuridique;
 
     EditText email, password;
     Button login, register;
@@ -34,16 +50,27 @@ public class InscriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText editTextnom = (EditText) findViewById(R.id.editTextNom);
-        EditText editTextPrenom = (EditText) findViewById(R.id.editTextPrenom);
-        EditText editTextMatricule = (EditText) findViewById(R.id.editTextMatricule);
-        EditText editTextAdresse = (EditText) findViewById(R.id.editTextAdresse);
-        EditText editTextTelephone = (EditText) findViewById(R.id.editTextTéléphone);
-        EditText editTextNomassociation = (EditText) findViewById(R.id.editTextNomassociation);
-        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        EditText editTextMotdepasse = (EditText) findViewById(R.id.editTextMotdepasse);
-        EditText editTextCodeVerification = (EditText) findViewById(R.id.editTextCodeVerification);
+         editTextnom = (EditText) findViewById(R.id.editTextNom);
+         editTextPrenom = (EditText) findViewById(R.id.editTextPrenom);
+         editTextMatricule = (EditText) findViewById(R.id.editTextMatricule);
+         editTextAdresse = (EditText) findViewById(R.id.editTextAdresse);
+         editTextTelephone = (EditText) findViewById(R.id.editTextTéléphone);
+         editTextNomassociation = (EditText) findViewById(R.id.editTextNomassociation);
+         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+         editTextMotdepasse = (EditText) findViewById(R.id.editTextMotdepasse);
+         editTextCodeVerification = (EditText) findViewById(R.id.editTextCodeVerification);
         Button ImporterFichierJuridique = (Button) findViewById(R.id.ImporterFichierJuridique);
+        ImporterFichierJuridique.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // perform action when button is clicked
+                // for example, open file picker dialog to choose a file
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("*/*"); // set mime type to all file types
+                startActivityForResult(intent, FILE_PICKER_REQUEST_CODE);
+            }
+        });
+
         Button buttonCreer = (Button) findViewById(R.id.buttonCreer);
         Button seConnect=(Button)findViewById(R.id.seConnect);
         buttonCreer.setOnClickListener(new View.OnClickListener() {
@@ -155,4 +182,31 @@ public class InscriptionActivity extends AppCompatActivity {
     private boolean isValidMobile(String mobile) {
                 return mobile.matches("\\+?212[\\s-]?[567]\\d{8}");
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == FILE_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
+            // get the file uri from the result intent
+            Uri fileUri = data.getData();
+
+            // create a reference to the Firebase Storage location where the file will be uploaded
+            StorageReference fileRef = FirebaseStorage.getInstance().getReference().child("files/" + fileUri.getLastPathSegment());
+
+            // upload the file to Firebase Storage and add an OnSuccessListener to get its download URL
+            fileRef.putFile(fileUri).addOnSuccessListener(taskSnapshot -> {
+                // get the download URL of the uploaded file
+                Task<Uri> downloadUrlTask = taskSnapshot.getStorage().getDownloadUrl();
+                downloadUrlTask.addOnSuccessListener(downloadUri -> {
+                    // save the download URL to the database
+                    String downloadUrlString = downloadUri.toString();
+                    reference.child("downloadUrl").setValue(downloadUrlString);
+                });
+            }).addOnFailureListener(e -> {
+                // handle the upload failure
+                Toast.makeText(this, "Failed to upload file", Toast.LENGTH_SHORT).show();
+            });
+        }
+    }
+
 }
