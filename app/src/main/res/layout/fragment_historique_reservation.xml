@@ -7,6 +7,7 @@
     android:background="@color/navColor"
     android:orientation="vertical"
     tools:context=".controller.Historique_reservation"
+    android:id="@+id/histor"
     >
 
     <RelativeLayout

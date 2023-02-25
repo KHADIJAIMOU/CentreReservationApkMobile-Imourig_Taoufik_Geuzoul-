@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "747308969737",
+    "firebase_url": "https://reservationcentremobile-default-rtdb.firebaseio.com",
     "project_id": "reservationcentremobile",
     "storage_bucket": "reservationcentremobile.appspot.com"
   },
