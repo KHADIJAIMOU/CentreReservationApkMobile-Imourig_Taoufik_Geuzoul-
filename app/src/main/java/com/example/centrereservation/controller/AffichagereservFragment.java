@@ -53,6 +53,9 @@ public class AffichagereservFragment extends Fragment {
         txtTF = view.findViewById(R.id.textTempsF);
         txtObj = view.findViewById(R.id.textObj);
         btnAnn = view.findViewById(R.id.buttonAnn);
+
+        String centreId = getArguments().getString("centreId");
+        String salleId = getArguments().getString("salleId");
         String reservationId = getArguments().getString("reservationId");
         databaseReference = FirebaseDatabase.getInstance().getReference("Reservation");
 
@@ -93,6 +96,8 @@ public class AffichagereservFragment extends Fragment {
                 ModifierreservFragment modFrag = new ModifierreservFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("reservationId", reservationId);
+                bundle.putString("centreId", centreId);
+                bundle.putString("salleId", salleId);
                 modFrag.setArguments(bundle);
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.navHostFragment, modFrag);
@@ -100,16 +105,7 @@ public class AffichagereservFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ReservationFragment resFrag = new ReservationFragment();
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.navHostFragment, resFrag);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
+
         btnAnn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,6 +129,21 @@ public class AffichagereservFragment extends Fragment {
                                 Toast.makeText(getActivity(), "Failed to delete reservation", Toast.LENGTH_SHORT).show();
                             }
                         });
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ReservationFragment resFrag = new ReservationFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("reservationId", reservationId);
+                bundle.putString("centreId", centreId);
+                bundle.putString("salleId", salleId);
+                resFrag.setArguments(bundle);
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.navHostFragment, resFrag);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
         return view;

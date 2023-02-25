@@ -7,10 +7,11 @@
 
     app:cardBackgroundColor="#fff"
     app:cardUseCompatPadding="true">
+
     <RelativeLayout
         android:id="@+id/item_2"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="136dp"
         android:background="@drawable/rectangle_list"
         android:padding="16dp">
 
@@ -19,19 +20,31 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/salle3"
-            android:background="@drawable/roundimage"
-            />
+            android:layout_marginRight="6dp"
+            android:src="@drawable/salle3" />
+
         <TextView
             android:id="@+id/typeSalle_"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-5dp"
-            android:text="Salle d’acceuil"
             android:layout_marginLeft="8dp"
-            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/image_salle"
+            android:text="Salle d’acceuil"
             android:textColor="#000"
-            android:layout_toRightOf="@id/image_salle"/>
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/availability_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nbSeats_"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/image_salle"
+            android:text="availability: oui"
+            android:textColor="#000" />
 
         <TextView
             android:id="@+id/nbSeats_"
@@ -40,24 +53,9 @@
             android:layout_below="@id/typeSalle_"
             android:layout_marginLeft="9dp"
             android:layout_marginTop="-2dp"
-
             android:layout_toRightOf="@id/image_salle"
-            android:text="nbSeats :15"
+            android:text="nbSeats: 15"
             android:textColor="#000" />
-
-        <TextView
-            android:id="@+id/availability_"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/nbSeats_"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="-1dp"
-            android:layout_toRightOf="@id/image_salle"
-            android:text="availability_ :true"
-            android:textColor="#000" />
-
-
-
 
 
     </RelativeLayout>

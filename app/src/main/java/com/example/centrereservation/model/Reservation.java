@@ -11,6 +11,8 @@ import java.util.Map;
 public class Reservation {
     // Attributs
     private String idReservation;
+    private String  idCentre;
+    private String  idSalle;
     private String dateStart;
     private String dateEnd;
     private String timeStart;
@@ -21,7 +23,7 @@ public class Reservation {
 //    private String nomCentre;
 
     // constricteur
-    public Reservation(String idReservation, String dateStart, String dateEnd, String timeStart,String timeEnd, String Progress, String notice) {
+    public Reservation(String idReservation, String dateStart, String dateEnd, String timeStart,String timeEnd, String Progress, String notice,String idCentre,String idSalle) {
         this.idReservation = idReservation;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
@@ -29,6 +31,8 @@ public class Reservation {
         this.timeEnd = timeEnd;
         this.Progress = Progress;
         this.notice = notice;
+        this.idCentre=idCentre;
+        this.idSalle=idSalle;
 
     }
     public Map<String, Object> toMap() {
@@ -51,6 +55,14 @@ public class Reservation {
 
     public String getDateStart() {
         return dateStart;
+    }
+
+    public String getIdSalle() {
+        return idSalle;
+    }
+
+    public void setIdSalle(String idSalle) {
+        this.idSalle = idSalle;
     }
 
     public String getDateEnd() {
@@ -86,6 +98,13 @@ public class Reservation {
         this.dateEnd = dateEnd;
     }
 
+    public String getIdCentre() {
+        return idCentre;
+    }
+
+    public void setIdCentre(String idCentre) {
+        this.idCentre = idCentre;
+    }
 
     public void setTimeStart(String timeStart) {
         this.timeStart = timeStart;

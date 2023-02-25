@@ -61,6 +61,9 @@ public class ModifierreservFragment extends Fragment {
         tempsD.setInputType(InputType.TYPE_NULL);
         tempsF.setInputType(InputType.TYPE_NULL);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        String centreId = getArguments().getString("centreId");
+        String salleId = getArguments().getString("salleId");
+
         reservationId = getArguments().getString("reservationId");
 
         mDatabase.child("Reservation").child(reservationId).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -101,7 +104,7 @@ public class ModifierreservFragment extends Fragment {
                     reservationUpdates.put("timeStart", tempsD.getText());
                     reservationUpdates.put("timeEnd", tempsF.getText());
                     reservationUpdates.put("notice", obj.getText());
-                    Reservation updatedReservation = new Reservation(reservationId, newDateDebut, newDateFin, newtempsD, newtempsF, "en attente", newobj);
+                    Reservation updatedReservation = new Reservation(reservationId, newDateDebut, newDateFin, newtempsD, newtempsF, "en attente", newobj,centreId,salleId);
                     Map<String, Object> reservationValues = updatedReservation.toMap();
                     Map<String, Object> childUpdates = new HashMap<>();
                     childUpdates.put("/Reservation/" + reservationId, reservationValues);

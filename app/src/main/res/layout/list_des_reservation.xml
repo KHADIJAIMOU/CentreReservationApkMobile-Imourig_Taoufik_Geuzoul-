@@ -1,44 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:id="@+id/item_reser1"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/rectangle_list"
-        android:padding="16dp">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:elevation="8dp"
 
+    app:cardBackgroundColor="#fff"
+    app:cardUseCompatPadding="true">
+    <!-- Repeat for the other four items -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_list_historique"
+        android:padding="15dp">
         <ImageView
             android:id="@+id/img_reser"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/salle5" />
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ceftiznit"
+            />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/NomCentre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/img_reser"
+            android:text="CEFT Tiznit"
+            android:textColor="#FF640D"
+            android:textSize="13dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/NomSalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/NomCentre"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="-20dp"
+            android:layout_toRightOf="@id/img_reser"
+            android:text="CEFT Tiznit"
+            android:textColor="#00BCD4"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nom_rese"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:orientation="vertical">
+            android:layout_below="@id/NomCentre"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@id/img_reser"
+            android:text="centre de formation et d'etudes"
+            android:textColor="#000" />
 
-            <TextView
-                android:id="@+id/reserv_sal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:text="Salle d’acceuil"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/Avancement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NomCentre"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="90dp"
+            android:layout_toRightOf="@id/img_reser"
+            android:text="centre de formation et d'etudes"
+            android:textColor="#000" />
 
-            <TextView
-                android:id="@+id/details_reserv"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:layout_marginTop="1dp"
-                android:text="Date Début : 04-01-2023. \nDate Fin : 09-01-2023.\nTemps Début : 10:45.\nTemps Fin : 12:45.\nAvancement : Acceptée." />
-        </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
-</LinearLayout>
+
+</androidx.cardview.widget.CardView>
