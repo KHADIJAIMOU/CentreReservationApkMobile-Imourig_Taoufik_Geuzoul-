@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.centrereservation.R;
-import com.example.centrereservation.center;
+import com.example.centrereservation.model.center;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
@@ -31,7 +31,7 @@ public class List_Adapter_centre extends FirebaseRecyclerAdapter<center,List_Ada
 
 
         holder.Nom_centre.setText(model.getName());
-        holder.features_centre.setText(model.getfeatures());
+      //  holder.features_centre.setText(model.getfeatures());
         Glide.with(holder.img_centre.getContext()).load(model.getImage()).into(holder.img_centre);
         holder.img_centre.setOnClickListener(new View.OnClickListener() {
             @Override
