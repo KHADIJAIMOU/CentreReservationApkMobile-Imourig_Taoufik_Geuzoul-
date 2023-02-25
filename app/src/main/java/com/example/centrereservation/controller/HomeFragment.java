@@ -1,5 +1,6 @@
 package com.example.centrereservation.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.centrereservation.List_Adapter_centre;
+import com.example.centrereservation.controller.List_Adapter_centre;
 import com.example.centrereservation.R;
 import com.example.centrereservation.center;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -37,7 +38,6 @@ public class HomeFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycleview1);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext())) ;
         FirebaseRecyclerOptions<center> options = new FirebaseRecyclerOptions.Builder<center>().setQuery(FirebaseDatabase.getInstance().getReference().child("Centre"), center.class).build();
-
 
         adapter_centere=new List_Adapter_centre(options);
         recyclerView.setAdapter(adapter_centere);

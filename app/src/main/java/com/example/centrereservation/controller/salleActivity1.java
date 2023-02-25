@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.centrereservation.List_Adapter_centre;
+import com.example.centrereservation.controller.List_Adapter_centre;
 import com.example.centrereservation.R;
 import com.example.centrereservation.center;
 import com.example.centrereservation.list_adapter_salle;

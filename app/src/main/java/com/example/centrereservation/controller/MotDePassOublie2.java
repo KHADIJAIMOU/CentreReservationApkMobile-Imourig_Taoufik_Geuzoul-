@@ -1,8 +1,10 @@
-package com.example.centrereservation;
+package com.example.centrereservation.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.centrereservation.R;
 
 public class MotDePassOublie2 extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.centrereservation;
+package com.example.centrereservation.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 

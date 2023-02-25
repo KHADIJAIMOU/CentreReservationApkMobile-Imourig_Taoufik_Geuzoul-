@@ -1,4 +1,4 @@
-package com.example.centrereservation;
+package com.example.centrereservation.controller;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.centrereservation.controller.salleActivity1;
+import com.example.centrereservation.R;
+import com.example.centrereservation.center;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-
-import java.text.BreakIterator;
 
 public class List_Adapter_centre extends FirebaseRecyclerAdapter<center,List_Adapter_centre.MyViewHolder>
 {

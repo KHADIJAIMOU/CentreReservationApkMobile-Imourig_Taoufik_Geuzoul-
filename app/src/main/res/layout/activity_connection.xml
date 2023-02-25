@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FEFEFE"
     android:orientation="vertical"
-    tools:context=".ConnectionActivity">
+    tools:context=".controller.InscriptionActivity">
 
 
     <LinearLayout
@@ -48,7 +48,7 @@
                 android:background="@drawable/editround"
                 app:srcCompat="@drawable/user1" />
 
-            <TextView
+            <EditText
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="303dp"
                 android:layout_height="33dp"
@@ -85,7 +85,7 @@
 
             <EditText
                 android:id="@+id/editTextTextPassword"
-                android:layout_width="248dp"
+                android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
@@ -117,7 +117,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/SeConnect"
             android:layout_width="194dp"
             android:layout_height="54dp"
             android:layout_marginLeft="100dp"
@@ -130,7 +130,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/Inscription"
             android:layout_width="194dp"
             android:layout_height="54dp"
             android:layout_marginLeft="100dp"
