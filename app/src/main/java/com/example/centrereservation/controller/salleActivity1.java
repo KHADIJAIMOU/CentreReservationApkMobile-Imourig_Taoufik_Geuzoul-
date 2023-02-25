@@ -8,21 +8,26 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.centrereservation.R;
+import com.example.centrereservation.model.center;
 import com.example.centrereservation.model.salle;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -35,6 +40,8 @@ public class salleActivity1 extends Fragment {
     FirebaseDatabase database;
     DatabaseReference databaseReference;
     SalleAdapter adapter;
+    private EditText mSearchEditText;
+
     ArrayList<salle> list;
 
     public salleActivity1() {
@@ -50,6 +57,8 @@ public class salleActivity1 extends Fragment {
         View v= inflater.inflate(R.layout.fragment_salle_activity1, container, false);
         recyclerView = v.findViewById(R.id.recycleview_salle);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext())) ;
+        mSearchEditText = v.findViewById(R.id.search_box);
+
         adapter = new SalleAdapter();
         recyclerView.setAdapter(adapter);
         String centreId = getArguments().getString("centreId");
@@ -71,8 +80,46 @@ public class salleActivity1 extends Fragment {
             }
         });
 
-        return  v;
+        mSearchEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String queryText = s.toString().trim();
+                search(queryText);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        return v;
     }
+    private void search(String queryText) {
+        Query query = FirebaseDatabase.getInstance().getReference().child("salle")
+                .orderByChild("typeSalle")
+                .startAt(queryText)
+                .endAt(queryText + "\uf8ff");
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                List<salle> salles = new ArrayList<>();
+                for (DataSnapshot salleSnapshot : snapshot.getChildren()) {
+                    salle salle = salleSnapshot.getValue(salle.class);
+                    salles.add(salle);
+                }
+                adapter.setSalles(salles);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("salleFragment", "Failed to read value.", error.toException());
+            }
+        });
+    }
+
     private class SalleAdapter extends RecyclerView.Adapter<SalleViewHolder> {
 
         private List<salle> salles = new ArrayList<>();
@@ -126,8 +173,8 @@ public class salleActivity1 extends Fragment {
             Glide.with(img_salle.getContext())
                     .load(salle.getImage())
                     .into(img_salle);
-            availab_salle.setText(String.valueOf(salle.getAvailability()));
-            nbSeats_sal.setText(String.valueOf(salle.getNbSeats()));
+            availab_salle.setText("Nombre de siéges : "+String.valueOf(salle.getAvailability()));
+            nbSeats_sal.setText("Diponibilité : "+String.valueOf(salle.getNbSeats()));
             typesalle.setText(salle.getTypeSalle());
         }
     }
