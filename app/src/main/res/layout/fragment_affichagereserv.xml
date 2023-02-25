@@ -46,12 +46,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="30dp"
-            >
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView1"
@@ -60,7 +59,7 @@
                 android:layout_weight="1"
                 android:text="Date Début"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textDateD"
@@ -70,17 +69,17 @@
                 android:gravity="right"
                 android:text="04-01-2023"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="15dp"
-            >
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView2"
@@ -89,7 +88,7 @@
                 android:layout_weight="1"
                 android:text="Date Fin"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textDateF"
@@ -99,17 +98,17 @@
                 android:gravity="right"
                 android:text="09-01-2023"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="15dp"
-            >
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView3"
@@ -118,7 +117,7 @@
                 android:layout_weight="1"
                 android:text="Temps Début"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textTempsD"
@@ -128,17 +127,17 @@
                 android:gravity="right"
                 android:text="10:45"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="15dp"
-            >
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView4"
@@ -147,7 +146,7 @@
                 android:layout_weight="1"
                 android:text="Temps Fin"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textTempsF"
@@ -157,17 +156,17 @@
                 android:gravity="right"
                 android:text="12:45"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="15dp"
-            >
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView5"
@@ -175,26 +174,28 @@
                 android:layout_height="wrap_content"
                 android:text="Objectif"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
+
             <TextView
                 android:id="@+id/textObj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
                 android:text="reserver la salle d’education pour effecutier une formation"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="30dp"
-            >
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView6"
@@ -203,7 +204,7 @@
                 android:layout_weight="1"
                 android:text="Avancement"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/imageView2"

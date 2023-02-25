@@ -5,20 +5,23 @@ package com.example.centrereservation.model;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Reservation {
     // Attributs
-    private int idReservation;
-    private Date dateStart;
-    private Date dateEnd;
-    private Time timeStart;
-    private Time timeEnd;
+    private String idReservation;
+    private String dateStart;
+    private String dateEnd;
+    private String timeStart;
+    private String timeEnd;
     private String  Progress;
     private String notice;
-    private String nomAssociation;
-    private String nomCentre;
+//    private String nomAssociation;
+//    private String nomCentre;
+
     // constricteur
-    public Reservation(int idReservation, Date dateStart, Date dateEnd, Time timeStart, Time timeEnd, String Progress, String notice, String nomAssociation,    String nomCentre) {
+    public Reservation(String idReservation, String dateStart, String dateEnd, String timeStart,String timeEnd, String Progress, String notice) {
         this.idReservation = idReservation;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
@@ -26,35 +29,39 @@ public class Reservation {
         this.timeEnd = timeEnd;
         this.Progress = Progress;
         this.notice = notice;
-        this.nomAssociation=nomAssociation;
-        this.nomCentre=nomCentre;
+
     }
-    // getters
-    public String getNomAssociation() {
-        return nomAssociation;
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("idReservation", idReservation);
+        result.put("dateStart", dateStart);
+        result.put("dateEnd", dateEnd);
+        result.put("timeStart", timeStart);
+        result.put("timeEnd", timeEnd);
+        result.put("Progress", Progress);
+        result.put("notice", notice);
+        return result;
+    }
+    public Reservation() {
     }
 
-    public String getNomCentre() {
-        return nomCentre;
-    }
-
-    public int getIdReservation() {
+    public String getIdReservation() {
         return idReservation;
     }
 
-    public Date getDateStart() {
+    public String getDateStart() {
         return dateStart;
     }
 
-    public Date getDateEnd() {
+    public String getDateEnd() {
         return dateEnd;
     }
 
-    public Time getTimeStart() {
+    public String getTimeStart() {
         return timeStart;
     }
 
-    public Time getTimeEnd() {
+    public String getTimeEnd() {
         return timeEnd;
     }
 
@@ -67,37 +74,29 @@ public class Reservation {
     }
     // setters
 
-    public void setIdReservation(int idReservation) {
+    public void setIdReservation(String idReservation) {
         this.idReservation = idReservation;
     }
 
-    public void setDateStart(Date dateStart) {
+    public void setDateStart(String dateStart) {
         this.dateStart = dateStart;
     }
 
-    public void setDateEnd(Date dateEnd) {
+    public void setDateEnd(String dateEnd) {
         this.dateEnd = dateEnd;
     }
 
-    public void setNomCentre(String nomCentre) {
 
-        this.nomCentre = nomCentre;
-    }
-
-    public void setTimeStart(Time timeStart) {
+    public void setTimeStart(String timeStart) {
         this.timeStart = timeStart;
     }
 
-    public void setTimeEnd(Time timeEnd) {
+    public void setTimeEnd(String timeEnd) {
         this.timeEnd = timeEnd;
     }
 
     public void setProgress(String progress) {
         Progress = progress;
-    }
-
-    public void setNomAssociation(String nomAssociation) {
-        this.nomAssociation = nomAssociation;
     }
 
     public void setNotice(String notice) {
