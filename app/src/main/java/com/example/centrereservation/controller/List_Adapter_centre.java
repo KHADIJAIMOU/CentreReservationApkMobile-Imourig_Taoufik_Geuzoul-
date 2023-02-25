@@ -1,5 +1,6 @@
 package com.example.centrereservation.controller;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,22 @@ public class List_Adapter_centre extends FirebaseRecyclerAdapter<center,List_Ada
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.home,new salleActivity1()).addToBackStack(null).commit();
             }
         });
+        holder.localisation_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double latitude = model.getLatitude(); // get latitude from the data model
+                double longitude = model.getLongitude(); // get longitude from the data model
+                String image = model.getImage(); // get longitude from the data model
+                String Name = model.getName(); // get longitude from the data model
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                Intent intent = new Intent(activity, MapsActivity.class);
+                intent.putExtra("latitude", latitude); // pass latitude to the MapsActivity
+                intent.putExtra("longitude", longitude);
+                intent.putExtra("image", image); // pass latitude to the MapsActivity
+                intent.putExtra("Name", Name); // pass longitude to the MapsActivity
+                activity.startActivity(intent);
+            }
+        });
 
     }
 
@@ -51,7 +68,7 @@ public class List_Adapter_centre extends FirebaseRecyclerAdapter<center,List_Ada
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView img_centre;
+        ImageView img_centre,localisation_icon;
         TextView Nom_centre;
 
         TextView features_centre;
@@ -61,6 +78,7 @@ public class List_Adapter_centre extends FirebaseRecyclerAdapter<center,List_Ada
             img_centre=Itemview.findViewById(R.id.img_center);
             Nom_centre=Itemview.findViewById(R.id.name_center);
             features_centre =Itemview.findViewById(R.id.features_centre);
+            localisation_icon=Itemview.findViewById(R.id.localisation_icon);
         }
 
     }

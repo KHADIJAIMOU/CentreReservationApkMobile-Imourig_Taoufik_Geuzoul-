@@ -4,6 +4,8 @@ public class center {
 
 
     private  String name ,image, features;
+    private double latitude;
+    private double longitude;
 
 
     public center(String name, String image, String features) {
@@ -11,7 +13,28 @@ public class center {
         this.image = image;
         this.features = features;
     }
+    public center(String name, String image, String features,double latitude, double longitude) {
+        this.name = name;
+        this.image = image;
+        this.features = features;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+    public double getLatitude() {
+        return latitude;
+    }
 
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
     public String getName() {
         return name;
     }
