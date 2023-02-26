@@ -1,6 +1,7 @@
 package com.example.centrereservation.controller;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +9,12 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.centrereservation.R;
+import com.example.centrereservation.model.users;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     checkuser();
+
                 }
 
             }
         });
+
         Inscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users") ;
         Query checkUserDatabase = reference. orderByChild ("email").equalTo(userusername);
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     PersonEmail.setError(null);
@@ -86,7 +92,23 @@ public class MainActivity extends AppCompatActivity {
                     if(passwordFromDb.equals(userpassword)){
                         PersonEmail.setError(null);
 
+                        String mobilePhone = snapshot.child(key).child("mobilePhone").getValue(String.class);
+                        String password = snapshot.child(key).child("password").getValue(String.class);
+                        String token = snapshot.child(key).child("token").getValue(String.class);
 
+                        String adress = snapshot.child(key).child("adress").getValue(String.class);
+                        String userEmail = PersonEmail.getText().toString().trim();
+                        SharedPreferences sharedPref = getSharedPreferences("myPrefs", MODE_PRIVATE);
+
+
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("userEmail", userEmail);
+                        editor.putString("adress", adress);
+                        editor.putString("mobilePhone", mobilePhone);
+                        editor.putString("password", password);
+                        editor.putString("token", token);
+
+                        editor.apply();
                         Intent intent=new Intent(MainActivity.this, AppActivity.class);
                         startActivity(intent);
                     }

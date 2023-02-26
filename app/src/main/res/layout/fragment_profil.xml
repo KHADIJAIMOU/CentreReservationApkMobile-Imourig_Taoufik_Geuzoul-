@@ -26,6 +26,7 @@
                     android:src="@drawable/profile"
                     />
                 <TextView
+                    android:id="@+id/nom_association"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nom Association"
@@ -50,7 +51,6 @@
                     android:text="upload image"
                     android:backgroundTint="@color/bgBtnEditImg"
                     android:textColor="@color/black"
-
                     />
 
                 <Button
@@ -88,7 +88,6 @@
                 android:ems="10"
                 android:inputType="phone"
                 android:paddingLeft="15dp"
-                android:text="06 12 34 56 78"
                 android:textColor="@color/editTxtColor"
                 android:textSize="20sp"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -111,7 +110,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:paddingLeft="15dp"
-                android:text="Tiznit"
+
                 android:textColor="@color/editTxtColor"
                 android:textSize="20sp"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -134,7 +133,7 @@
                 android:ems="10"
                 android:inputType="textEmailAddress"
                 android:paddingLeft="15dp"
-                android:text="association@gmail.com"
+
                 android:textColor="@color/editTxtColor"
                 android:textSize="20sp"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -157,7 +156,6 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:paddingLeft="15dp"
-                android:text="azertyuiop^$"
                 android:textColor="@color/editTxtColor"
                 android:textSize="20sp"
                 tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
@@ -179,11 +177,12 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:paddingLeft="15dp"
-                android:text="azertyuiop^$"
+
                 android:textColor="@color/editTxtColor"
                 android:textSize="20sp"
                 tools:ignore="TouchTargetSizeCheck" />
             <Button
+                android:id="@+id/editButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Editer"
