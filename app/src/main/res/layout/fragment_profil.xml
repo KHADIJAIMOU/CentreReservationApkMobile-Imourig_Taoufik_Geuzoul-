@@ -133,7 +133,7 @@
                 android:ems="10"
                 android:inputType="textEmailAddress"
                 android:paddingLeft="15dp"
-
+                android:enabled="false"
                 android:textColor="@color/editTxtColor"
                 android:textSize="20sp"
                 tools:ignore="TouchTargetSizeCheck" />
