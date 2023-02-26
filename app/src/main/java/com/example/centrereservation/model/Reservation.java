@@ -44,6 +44,8 @@ public class Reservation {
         result.put("timeEnd", timeEnd);
         result.put("Progress", Progress);
         result.put("notice", notice);
+        result.put("idCentre",idCentre);
+        result.put("idSalle",idSalle);
         return result;
     }
     public Reservation() {

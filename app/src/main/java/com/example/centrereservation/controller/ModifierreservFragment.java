@@ -104,6 +104,8 @@ public class ModifierreservFragment extends Fragment {
                     reservationUpdates.put("timeStart", tempsD.getText());
                     reservationUpdates.put("timeEnd", tempsF.getText());
                     reservationUpdates.put("notice", obj.getText());
+                    reservationUpdates.put("idCentre", centreId);
+                    reservationUpdates.put("idSalle", salleId);
                     Reservation updatedReservation = new Reservation(reservationId, newDateDebut, newDateFin, newtempsD, newtempsF, "en attente", newobj,centreId,salleId);
                     Map<String, Object> reservationValues = updatedReservation.toMap();
                     Map<String, Object> childUpdates = new HashMap<>();
