@@ -7,7 +7,8 @@
     android:background="@color/navColor"
     android:orientation="vertical"
     android:id="@+id/HistoriqueResev"
-    tools:context=".controller.HistoriqueResev">
+    tools:context=".controller.HistoriqueResev"
+    >
 
     <RelativeLayout
         android:id="@+id/search_layout"

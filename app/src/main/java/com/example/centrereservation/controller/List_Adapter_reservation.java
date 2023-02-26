@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.fragment.app.Fragment;
@@ -33,6 +34,14 @@ import java.text.SimpleDateFormat;
 public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservation, List_Adapter_reservation.MyViewHolder> {
 
     private FirebaseStorage mStorage;
+    private FragmentManager fragmentManager;
+
+    // Constructor to receive the FragmentManager reference
+    public List_Adapter_reservation(@NonNull FirebaseRecyclerOptions<Reservation> options, FragmentManager fragmentManager) {
+        super(options);
+        mStorage = FirebaseStorage.getInstance();
+        this.fragmentManager = fragmentManager;
+    }
 
     public List_Adapter_reservation(@NonNull FirebaseRecyclerOptions<Reservation> options) {
         super(options);
@@ -52,7 +61,30 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
 
         holder.Nom_rese.setText( "\nDate Début : " + model.getDateStart() + "\nDate Fin : " + model.getDateEnd() + "\nTemps Début : " + model.getTimeStart() + "\nTemps Fin : " + model.getTimeEnd() + "\nAvancement :  \n");
         holder.Avancement.setText("        \n\n            "+progress);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Get the id of the reservation clicked
+                String idReservation = getItem(holder.getAdapterPosition()).getIdReservation();
+                String idCentre = getItem(holder.getAdapterPosition()).getIdCentre();
+                String idSalle = getItem(holder.getAdapterPosition()).getIdSalle();
 
+                // Pass the reservation id to the fragment
+                Fragment fragment = new AffichagereservFragmentHi();
+                Bundle bundle = new Bundle();
+                bundle.putString("reservationId", idReservation);
+                bundle.putString("centreId", idReservation);
+                bundle.putString("salleId", idReservation);
+                fragment.setArguments(bundle);
+
+                // Replace the current fragment with the new fragment
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.navHostFragment, fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
         // Fetch the center's image URL from Firebase Storage using the center's id
         DatabaseReference centerRef = FirebaseDatabase.getInstance().getReference("Centre").child(model.getIdCentre());
         centerRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -127,4 +159,3 @@ public class List_Adapter_reservation extends FirebaseRecyclerAdapter<Reservatio
         }
     }
 }
-

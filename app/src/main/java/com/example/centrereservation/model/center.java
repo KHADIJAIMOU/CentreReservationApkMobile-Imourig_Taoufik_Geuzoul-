@@ -18,12 +18,15 @@ public class center {
         this.idCentre = idCentre;
     }
 
-    public center(String name, String image, String features,double latitude, double longitude) {
+    public center(String name, String image, String features,double latitude, double longitude, String idCentre) {
         this.name = name;
         this.image = image;
         this.features = features;
         this.latitude = latitude;
         this.longitude = longitude;
+
+        this.idCentre = idCentre;
+
     }
     public double getLatitude() {
         return latitude;

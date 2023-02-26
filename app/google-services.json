@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "747308969737",
-    "firebase_url": "https://reservationcentremobile-default-rtdb.firebaseio.com",
-    "project_id": "reservationcentremobile",
-    "storage_bucket": "reservationcentremobile.appspot.com"
+    "project_number": "67700564738",
+    "firebase_url": "https://centrereservationapkmobile-default-rtdb.firebaseio.com",
+    "project_id": "centrereservationapkmobile",
+    "storage_bucket": "centrereservationapkmobile.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:747308969737:android:7d4bd597807a30501e6dd8",
+        "mobilesdk_app_id": "1:67700564738:android:6249800e2b6cc9dceed81b",
         "android_client_info": {
           "package_name": "com.example.centrereservation"
         }
       },
       "oauth_client": [
         {
-          "client_id": "747308969737-3ivpuqhg7usjoocl9207tffjn3q46hjb.apps.googleusercontent.com",
+          "client_id": "67700564738-47uq7n26le2jg1mqln3fhce61i3ngaul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.centrereservation",
+            "certificate_hash": "bddc7e76aa2a56e2ed525ae6de70f53a727ab113"
+          }
+        },
+        {
+          "client_id": "67700564738-ds1bjk6r76m8afo791la87p2uq5ukkvp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDa0yiqJhgar_fyfxw0rN8GF32TK4n_1H8"
+          "current_key": "AIzaSyBhww9R56SksIaMIpwWVA5RHx7bJ9lnmIo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "747308969737-3ivpuqhg7usjoocl9207tffjn3q46hjb.apps.googleusercontent.com",
+              "client_id": "67700564738-ds1bjk6r76m8afo791la87p2uq5ukkvp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

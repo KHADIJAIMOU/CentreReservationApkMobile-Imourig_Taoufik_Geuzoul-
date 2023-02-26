@@ -123,7 +123,7 @@ public class ReservationFragment extends Fragment{
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                salleActivity1 salleAc = new salleActivity1();
+                HomeFragment salleAc = new HomeFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("centreId", centreId);
                 salleAc.setArguments(bundle);
@@ -164,12 +164,12 @@ public class ReservationFragment extends Fragment{
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                 new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                String date = day + "/" + (month + 1) + "/" + year;
-                edt.setText(date);
-            }
-        }, year, month, day);
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                        String date = day + "/" + (month + 1) + "/" + year;
+                        edt.setText(date);
+                    }
+                }, year, month, day);
         datePickerDialog.show();
     }
 }

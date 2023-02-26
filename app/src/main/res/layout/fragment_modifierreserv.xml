@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/modify_fragment"
-    tools:context=".controller.ModifierreservFragment">
+    tools:context=".controller.ModifierreservFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
