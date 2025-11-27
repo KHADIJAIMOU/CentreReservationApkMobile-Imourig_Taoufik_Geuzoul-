@@ -41,14 +41,8 @@ Admins can manage the centers via a backend (Laravel optional) with JSON files f
 ## 🖼 Screenshots
 
 <p align="center">
-    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/a29to-leygm.jpg" width="200" alt="Screenshot 2">
-    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/a21cx-u4f7u.jpg" width="200" alt="Screenshot 3">
-</p>
-<p align="center">
-    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ahv88-305no.jpg" width="200" alt="Screenshot 4">
-    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/abxsk-lr1qa.jpg" width="200" alt="Screenshot 5">
-    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/a1c8o-1ovhp.jpg" width="200" alt="Screenshot 6">
-        <img src="https://s10.aconvert.com/convert/p3r68-cdx67/a8kfs-pszrl.jpg" width="200" alt="Screenshot 1">
+    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ab0ov-qzwd3.jpg" width="200" alt="Screenshot 2">
+  
 
 </p>
 
