@@ -40,7 +40,7 @@ Admins can manage the centers via a backend (Laravel optional) with JSON files f
 ## 🖼 Screenshots
 
 <p align="center">
-    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/tree/master/app/src/main/res/drawable/66C.PNG" width="200" alt="Screenshot 1">
+    <img src="https://raw.githubusercontent.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/master/app/src/main/res/drawable/66C.PNG" width="200" alt="Screenshot 1">
     <img src="https://raw.githubusercontent.com/YourUser/YourRepo/main/images/image2.png" width="200" alt="Screenshot 2">
     <img src="https://raw.githubusercontent.com/YourUser/YourRepo/main/images/image3.png" width="200" alt="Screenshot 3">
 </p>
