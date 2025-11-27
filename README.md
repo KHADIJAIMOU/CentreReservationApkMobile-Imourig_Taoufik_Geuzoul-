@@ -1,8 +1,7 @@
 <p align="center">
-    <a href="#" target="_blank">
         <img src="https://s10.aconvert.com/convert/p3r68-cdx67/a7azr-rphev.jpg" width="200" alt="Screenshot 11C">
 
-    </a>
+    
 </p>
 
 <h2 align="center">Centre Reservation App (Android)</h2>
