@@ -1,6 +1,7 @@
 <p align="center">
     <a href="#" target="_blank">
-        <img src="https://raw.githubusercontent.com/YourUser/YourRepo/main/images/logo.png" width="300" alt="CentreReservation Logo">
+        <img src="https://raw.githubusercontent.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/master/app/src/main/res/drawable/11C.PNG" width="200" alt="Screenshot 11C">
+
     </a>
 </p>
 
