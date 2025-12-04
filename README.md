@@ -38,9 +38,9 @@ Admins can manage the centers via a backend (Laravel optional) with JSON files f
 ---
 
 ## 🖼 Screenshots
-
+🛡️ CEFT – Application Mobile
 <p align="center">
-    <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ab0ov-qzwd3.jpg" alt="Screenshot 2">
+    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M2.png" alt="Screenshot 2">
   
 
 </p>
