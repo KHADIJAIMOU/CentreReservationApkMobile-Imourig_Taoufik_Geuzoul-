@@ -55,19 +55,33 @@ Admins can manage the centers via a simple backend system, with data stored in J
     <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/2555edeb90dc227f1e0dc39a2a65b87c68c4f451/app/src/main/res/drawable/map.png" alt="Screenshot 3">
 </p>
 
-### 🛡️ **More Screenshots**
+### 🛡️ **LISTES DES SALLES**
 <p align="center">
     <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M6.png" alt="Screenshot 2">
+</p>
+### 🛡️ **RESERVATION UNE SALLE **
+<p align="center">
     <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M7.png" alt="Screenshot 3">
 </p>
+### 🛡️ **RESERVATION COMPLET UNE SALLE **
 
 <p align="center">
     <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M8.png" alt="Screenshot 2">
+</p>
+### 🛡️ **MODIFICATION D UNE SALLE **
+
+<p align="center">
     <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M9.png" alt="Screenshot 3">
 </p>
 
+### 🛡️ **PROFILE **
+
 <p align="center">
-    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M11.png" alt="Screenshot 2">
+    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M11.png" alt="Screenshot 3">
+</p>
+### 🛡️ **MENU **
+
+<p align="center">
     <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/M10.png" alt="Screenshot 3">
 </p>
 
