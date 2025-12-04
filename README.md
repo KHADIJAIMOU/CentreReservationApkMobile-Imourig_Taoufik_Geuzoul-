@@ -50,8 +50,8 @@ Admins can manage the centers via a backend (Laravel optional) with JSON files f
 
 </p>
 <p align="center">
-    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/centres.png" alt="Screenshot 2">
-    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/map.png" alt="Screenshot 3">
+    <img src="[https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/464e98b77863ebfc1135ff480c77bf965ffbeef9/app/src/main/res/drawable/centres.png](https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/2555edeb90dc227f1e0dc39a2a65b87c68c4f451/app/src/main/res/drawable/centres.png)" alt="Screenshot 2">
+    <img src="https://github.com/KHADIJAIMOU/CentreReservationApkMobile-Imourig_Taoufik_Geuzoul-/blob/2555edeb90dc227f1e0dc39a2a65b87c68c4f451/app/src/main/res/drawable/map.png" alt="Screenshot 3">
 
 </p>
 <p align="center">
